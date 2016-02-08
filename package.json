@@ -15,7 +15,7 @@
     "precompile": "node ./tasks/precompile.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "danjford <github.com/danjford>",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer-stylus": "^0.9.1",
