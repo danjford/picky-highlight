@@ -26,6 +26,11 @@ export function showPath( path ) {
 
 }
 
+/**
+ * Removes all classes of the given className
+ * @param  {String} name, the class that you want to remove
+ * @return {Void}, doesn't return anything
+ */
 const removeClass = ( name ) => {
 
   const elems = document.querySelectorAll( name );
@@ -36,6 +41,12 @@ const removeClass = ( name ) => {
 
 };
 
+/**
+ * Returns you the closest parent with a given className
+ * @param  {HTMLElement} element, The element you want to find the parent of
+ * @param  {String} name, the class name you want the found parent to have.
+ * @return {HTMLElement}, The parent with the class Name of the element you want.
+ */
 const closest = ( element, name ) => {
 
   const base = element.node;
@@ -54,7 +65,12 @@ const closest = ( element, name ) => {
 
 };
 
-export function showCollapsible( el, show ) {
+/**
+ * The Ractive mouseover / mouseleave event to show the collapsible button
+ * @param  {Object} el, The Ractive representation of a node
+ * @return {Void}, returns nothing
+ */
+export function showCollapsible( el ) {
 
   if ( el.original.type === 'mouseover') {
 
@@ -68,6 +84,11 @@ export function showCollapsible( el, show ) {
 
 }
 
+/**
+ * What happens on render in the amin component i.e. retrieving from localStorage
+ * @param  {Config} config, the main config object
+ * @return {Void}, doesn't return anything
+ */
 export function onRender( config ) {
 
   // Unless localStorage is disabled, retrieve localStorage data
