@@ -1,0 +1,33 @@
+.picky-string, .picky-number, .picky-wrap, .picky-attr
+  cursor: pointer
+  position: relative
+  &.is-selected
+    background: lighten(yellow, 50%)
+  &:hover
+    background: lighten(yellow, 75%)
+    &.is-selected
+      background: lighten(yellow, 50%)
+
+.picky
+  .active-collapse > .collapsible
+    opacity: 1
+    cursor: pointer
+  .collapsible
+    display: block
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    opacity: 0
+    width: 18px
+  .parent
+    padding-left: 10px
+    position: relative
+  .ellipsis
+    position: relative
+    left: -4px
+  code
+    &:after
+      content: ''
+      display: table
+      clear: both

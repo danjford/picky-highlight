@@ -1,0 +1,7 @@
+<span class="picky-wrap{{~/isSelected === @keypath ? ' is-selected' : ''}}" on-click="showPath:{{@keypath}}" on-mouseover-mouseout="showCollapsible">[</span><span class="collapsible" on-click="collapse" on-mouseover-mouseout="showCollapsible">{{#if ~/collapsed.indexOf(@keypath) > -1 }}&#43;{{else}}&#45;{{/if}}</span>
+  {{#if ~/collapsed.indexOf(@keypath) > -1 }}
+    <span class="ellipsis">...</span>
+  {{else}}
+    {{> 'recurse'}}
+  {{/if}}
+<span class="picky-wrap{{~/isSelected === @keypath ? ' is-selected' : ''}}" on-click="showPath:{{@keypath}}" on-mouseover-mouseout="showCollapsible">]</span>{{#if @index < thisLength - 1}},{{/if}}

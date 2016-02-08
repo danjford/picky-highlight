@@ -1,0 +1,36 @@
+{
+  "name": "picky-highlight",
+  "version": "0.0.1",
+  "description": "The highlighter which backs the pickyjson website.",
+  "main": "dist/picky-highlight.js",
+  "jsnext:main": "src/js/main.js",
+  "scripts": {
+    "start": "npm run clean && npm run precompile && npm-run-all --parallel styles:* watch:*",
+    "styles:stylus": "stylus -m -u autoprefixer-stylus -w ./src/styl/base.styl -o dist/picky-highlight.css",
+    "scripts:lint": "eslint ./src/js",
+    "scripts:bundle": "rollup -c ./config/rollup.js",
+    "clean": "rm -drf dist && mkdir -p ./dist/",
+    "watch:templates": "watchman ./src/templates \"npm run precompile\"",
+    "watch:scripts": "watchman ./src/js \"npm run scripts:lint && npm run scripts:bundle && node ./tasks/version.js\"",
+    "precompile": "node ./tasks/precompile.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.9.1",
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "eslint": "^1.10.3",
+    "pre-commit": "^1.1.2",
+    "rollup": "^0.25.3",
+    "stylus": "^0.53.0",
+    "watchman": "^0.1.8"
+  },
+  "dependencies": {
+    "ractive": "git+https://github.com/ractivejs/ractive.git#edge"
+  },
+  "pre-commit": [
+    "format:standard"
+  ]
+}

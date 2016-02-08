@@ -1,0 +1,27 @@
+{{#if @key !== 'pickyCollapsed'}}
+
+  {{#with this as context,
+        Array.isArray(this) as isArray,
+        ( Array.isArray(this) ? this.length : Object.keys(this).length ) as thisLength
+  }}
+
+    {{#each context}}
+
+      <div class="parent">
+        {{#if typeof this === 'object' && this !== null}}
+          {{#if Array.isArray(this)}}
+            <span class="picky-attr{{~/isSelected === @keypath ? ' is-selected' : ''}}" on-click="showPath:{{@keypath}}" on-mouseover-mouseout="showCollapsible">"{{@key}}"</span>:
+            {{> 'array'}}
+          {{else}}
+            {{> 'object'}}
+          {{/if}}
+        {{else}}
+          {{> 'attr'}}
+          <span class="{{#if typeof this == 'string'}}picky-string{{else}}picky-number{{/if}} {{~/isSelected === @keypath ? 'is-selected' : ''}}" on-click="showPath:{{@keypath}}">{{#if typeof this == 'string'}}"{{this}}"{{else}}{{this == null ? 'null' : this}}{{/if}}</span>{{#if @index < thisLength - 1 }},{{/if}}
+        {{/if}}
+      </div>
+    {{/each}}
+
+  {{/with}}
+
+{{/if}}

@@ -1,0 +1,24 @@
+light()
+  background-color: #fff
+  .picky-string, .picky-number, .picky-wrap, .picky-attr
+    &.is-selected
+      background: lighten(yellow, 50%)
+    &:hover
+      background: lighten(yellow, 75%)
+      &.is-selected
+        background: lighten(yellow, 50%)
+  .collapsible
+    color: black
+
+dark()
+  color: #fff
+  background-color: #383838
+  .picky-string, .picky-number, .picky-wrap, .picky-attr
+    &.is-selected
+      background: #505050
+    &:hover
+      background: #505050
+      &.is-selected
+        background: lighten(#505050, 10%)
+  .collapsible
+    color: #fff

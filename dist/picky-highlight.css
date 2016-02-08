@@ -1,0 +1,119 @@
+.hljs {
+  background-color: #fff;
+}
+.hljs .picky-string.is-selected,
+.hljs .picky-number.is-selected,
+.hljs .picky-wrap.is-selected,
+.hljs .picky-attr.is-selected {
+  background: #ffff80;
+}
+.hljs .picky-string:hover,
+.hljs .picky-number:hover,
+.hljs .picky-wrap:hover,
+.hljs .picky-attr:hover {
+  background: #ffffbf;
+}
+.hljs .picky-string:hover.is-selected,
+.hljs .picky-number:hover.is-selected,
+.hljs .picky-wrap:hover.is-selected,
+.hljs .picky-attr:hover.is-selected {
+  background: #ffff80;
+}
+.hljs .collapsible {
+  color: #000;
+}
+.hljs .picky-string {
+  color: #df5000;
+}
+.hljs .picky-attr {
+  color: #795da3;
+}
+.hljs .picky-number {
+  color: #800;
+}
+.space {
+  color: #fff;
+  background-color: #383838;
+}
+.space .picky-string.is-selected,
+.space .picky-number.is-selected,
+.space .picky-wrap.is-selected,
+.space .picky-attr.is-selected {
+  background: #505050;
+}
+.space .picky-string:hover,
+.space .picky-number:hover,
+.space .picky-wrap:hover,
+.space .picky-attr:hover {
+  background: #505050;
+}
+.space .picky-string:hover.is-selected,
+.space .picky-number:hover.is-selected,
+.space .picky-wrap:hover.is-selected,
+.space .picky-attr:hover.is-selected {
+  background: #626262;
+}
+.space .collapsible {
+  color: #fff;
+}
+.space .picky-string {
+  color: #b1b1b1;
+}
+.space .picky-attr {
+  color: #429dde;
+}
+.space .picky-number {
+  color: #9f9f9f;
+}
+.picky-string,
+.picky-number,
+.picky-wrap,
+.picky-attr {
+  cursor: pointer;
+  position: relative;
+}
+.picky-string.is-selected,
+.picky-number.is-selected,
+.picky-wrap.is-selected,
+.picky-attr.is-selected {
+  background: #ffff80;
+}
+.picky-string:hover,
+.picky-number:hover,
+.picky-wrap:hover,
+.picky-attr:hover {
+  background: #ffffbf;
+}
+.picky-string:hover.is-selected,
+.picky-number:hover.is-selected,
+.picky-wrap:hover.is-selected,
+.picky-attr:hover.is-selected {
+  background: #ffff80;
+}
+.picky .active-collapse > .collapsible {
+  opacity: 1;
+  cursor: pointer;
+}
+.picky .collapsible {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 18px;
+}
+.picky .parent {
+  padding-left: 10px;
+  position: relative;
+}
+.picky .ellipsis {
+  position: relative;
+  left: -4px;
+}
+.picky code:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+/*# sourceMappingURL=picky-highlight.css.map */
