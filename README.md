@@ -1,6 +1,5 @@
 Picky-highlight
 ====
-***
 
 _The highlighter that backs the pickyjson.com website_
 
