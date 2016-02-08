@@ -3,13 +3,8 @@
     <pre><code><div class="outer-bracket">{{#if Array.isArray(this.data)}}[{{else}}{{'{'}}{{/if}}</div>{{>'recurse' this.data}}<div class="outer-bracket">{{#if Array.isArray(this.data)}}]{{else}}{{'}'}}{{/if}}</div></code></pre>
   {{elseif this.loading}}
     <div class="loading-message">
-      <div class="spinner">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-      </div>
-      {{this.loadingMessage || 'Loading JSON from URL...'}}
+      {{{spinner}}}
+      {{this.loadingMessage || 'Loading JSON'}}
     </div>
   {{/if}}
 </div>

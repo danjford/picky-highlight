@@ -1,4 +1,4 @@
-import { config } from '../config/defaults';
+import { config, spinner } from '../config/defaults';
 import { hasWindow } from '../config/environment';
 import { collapse, showPath, showCollapsible, onRender } from './events.js';
 import templates from '../builtTemplates.js';
@@ -15,6 +15,10 @@ export function createInstance( config ) {
 
   if ( config.theme ) {
     data.theme = config.theme;
+  }
+
+  if ( !config.spinner ) {
+    data.spinner = spinner;
   }
 
   // The Ractive object
