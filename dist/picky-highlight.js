@@ -186,7 +186,7 @@
 
     // The Ractive object
     var main = new Ractive({
-      el: config.element || 'body',
+      el: config.el || 'body',
       template: templates.main,
       partials: {
         array: templates.array,

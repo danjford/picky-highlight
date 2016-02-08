@@ -23,7 +23,7 @@ export function createInstance( config ) {
 
   // The Ractive object
   const main = new Ractive({
-    el: config.element || 'body',
+    el: config.el || 'body',
     template: templates.main,
     partials: {
       array: templates.array,
