@@ -1,6 +1,6 @@
 {
   "name": "picky-highlight",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The highlighter which backs the pickyjson website.",
   "main": "dist/picky-highlight.js",
   "jsnext:main": "src/js/main.js",
@@ -10,7 +10,7 @@
     "scripts:lint": "eslint ./src/js",
     "scripts:bundle": "rollup -c ./config/rollup.js",
     "clean": "rm -drf dist && mkdir -p ./dist/",
-    "watch:templates": "watchman ./src/templates \"npm run precompile\"",
+    "watch:templates": "watchman ./src/templates \"rm ./src/js/builtTemplates.js && npm run precompile\"",
     "watch:scripts": "watchman ./src/js \"npm run scripts:lint && npm run scripts:bundle && node ./tasks/version.js\"",
     "precompile": "node ./tasks/precompile.js",
     "test": "echo \"Error: no test specified\" && exit 1"

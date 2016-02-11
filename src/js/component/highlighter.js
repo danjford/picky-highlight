@@ -29,7 +29,8 @@ export function createInstance( config ) {
       array: templates.array,
       object: templates['object'],
       attr: templates.attr,
-      recurse: templates.recurse
+      recurse: templates.recurse,
+      collapse: templates.collapse
     },
     onrender: function() { onRender.call(this, config); },
     data

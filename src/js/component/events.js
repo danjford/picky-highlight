@@ -68,17 +68,24 @@ const closest = ( element, name ) => {
 /**
  * The Ractive mouseover / mouseleave event to show the collapsible button
  * @param  {Object} el, The Ractive representation of a node
+ * @param  {Object} keypath, The hovered keypath
  * @return {Void}, returns nothing
  */
 export function showCollapsible( el ) {
 
+  const target = el.original.toElement || el.original.relatedTarget;
+
+  console.log(target && !target.isEqualNode(el.node));
+
   if ( el.original.type === 'mouseover') {
 
     closest(el, '.parent').className += ' active-collapse';
+    this.set('collapseHover', el.keypath);
 
-  } else {
+  } else if ( target && !target.isEqualNode(el.node) && target.className.indexOf('collapsible') === -1 ){
 
     removeClass('.active-collapse');
+    this.set('collapseHover', '');
 
   }
 

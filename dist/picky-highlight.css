@@ -107,10 +107,6 @@
   padding-left: 10px;
   position: relative;
 }
-.picky .ellipsis {
-  position: relative;
-  left: -4px;
-}
 .picky code:after {
   content: '';
   display: table;

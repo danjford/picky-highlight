@@ -1,0 +1,5 @@
+<span class="collapsible" on-click="collapse" on-mouseover-mouseout="showCollapsible:{{@keypath}}">
+{{#if ~/collapseHover === @keypath}}
+  {{#if ~/collapsed.indexOf(@keypath) > -1 }}&#43;{{else}}&#45;{{/if}}
+{{/if}}
+</span>

@@ -1,3 +1,3 @@
 {{#if !isArray }}
-  <span class="picky-attr{{~/isSelected === @keypath ? ' is-selected' : ''}}" on-click="showPath:{{@keypath}}" on-mouseover-mouseout="showCollapsible">"{{@key}}"</span>:
+  <span class="picky-attr{{~/isSelected === @keypath ? ' is-selected' : ''}}" on-click="showPath:{{@keypath}}" on-mouseover-mouseout="showCollapsible:{{@keypath}}">"{{@key}}"</span>:
 {{/if}}
