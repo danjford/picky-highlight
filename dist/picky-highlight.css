@@ -102,6 +102,7 @@
   left: 0;
   opacity: 0;
   width: 18px;
+  height: 15px;
 }
 .picky .parent {
   padding-left: 10px;
@@ -111,6 +112,15 @@
   content: '';
   display: table;
   clear: both;
+}
+.ellipsis::before {
+  content: '...';
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  left: -4px;
 }
 .default-spinner {
   margin: 30px auto;

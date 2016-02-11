@@ -20,6 +20,7 @@
     left: 0
     opacity: 0
     width: 18px
+    height: 15px
   .parent
     padding-left: 10px
     position: relative
@@ -28,3 +29,9 @@
       content: ''
       display: table
       clear: both
+
+.ellipsis::before
+  content: '...'
+  user-select: none
+  position: relative
+  left: -4px
