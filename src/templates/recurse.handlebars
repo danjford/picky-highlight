@@ -15,7 +15,7 @@
         {{/if}}
       {{else}}
         {{> 'attr'}}
-        <span class="{{#if typeof this == 'string'}}picky-string{{else}}picky-number{{/if}} {{~/isSelected === @keypath ? 'is-selected' : ''}}" on-click="showPath:{{@keypath}}">{{#if typeof this == 'string'}}"{{this}}"{{else}}{{this == null ? 'null' : this}}{{/if}}</span>{{#if @index < thisLength - 1 }},{{/if}}
+        <span class="{{#if typeof this == 'string'}}picky-string{{else}}picky-number{{/if}} {{~/isSelected === @keypath ? 'is-selected' : ''}}" on-click="showPath:{{@keypath}}">{{#if typeof this == 'string'}}{{JSON.stringify(this)}}{{else}}{{this == null ? 'null' : this}}{{/if}}</span>{{#if @index < thisLength - 1 }},{{/if}}
       {{/if}}
     </div>
   {{/each}}
