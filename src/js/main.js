@@ -24,4 +24,3 @@ function Highlight( options ) {
 }
 
 export default Highlight;
-
