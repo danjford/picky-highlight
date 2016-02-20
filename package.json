@@ -31,6 +31,6 @@
     "ractive": "git+https://github.com/ractivejs/ractive.git#edge"
   },
   "pre-commit": [
-    "format:standard"
+    "scripts:lint"
   ]
 }
