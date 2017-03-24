@@ -1,6 +1,6 @@
 {
   "name": "picky-highlight",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The highlighter which backs the pickyjson website.",
   "main": "dist/picky-highlight.js",
   "jsnext:main": "src/js/main.js",
